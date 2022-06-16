@@ -1,0 +1,40 @@
+Написати тестові набори даних для поля введення дати, яке відсіює користувачів віком до 18 років.
+
+today:
+16.06.2022	
+
+1) positive test cases:
+	1.1) 16.06.2004 = 18 years
+	1.2) 17.06.2004 > 18 years	
+
+2) negative test cases:
+	2.1) 15.06.2004 < 18 years
+	2.2) wrong for leap year (високосний):
+	29.02.2007 etc	
+		
+3) trash: 
+
+	3.1) > 16.06.2022 future
+
+	3.2) low level: 
+	00.00.0000
+	16.04.0000
+	16.00.2022
+	00.04.2022
+
+	3.3) high level: 
+	99.99.9999
+	16.04.9999
+	16.99.2022
+	99.04.2022
+	
+	3.4) Excel "magic" date: 01.01.1900
+
+	3.5) Unix "magic" date: 01.01.1970
+
+	3.6) database maximum: 31.12.9999
+
+	3.7) wrong text
+
+4) check for international formats: 
+	DD/MM/YYYY (international English) etc		
