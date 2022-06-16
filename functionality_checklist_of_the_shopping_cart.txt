@@ -1,0 +1,10 @@
+1. Navigation Breadcrumbs
+2. Correct calculation of the total amount of purchases
+3. Implemented input validation for the "Number of goods" forms (only numbers are used, it is possible to increase / decrease the number of goods on the "+" or "-" buttons).
+4. Entering zero in the "Quantity of goods" field makes it impossible to place an order and displays a corresponding warning.
+5. When using a large number of products, the total order amount is correctly recalculated on the fly.
+6. There is a link to return to the product catalog. 
+7. There is a button "Checkout", clicking on it leads to the transition to the corresponding page or to the corresponding pop-up dialog.
+8. All discounts have been applied correctly.
+9. A one-click purchase function is available.
+10. Correct display of prices taking into account currencies.
