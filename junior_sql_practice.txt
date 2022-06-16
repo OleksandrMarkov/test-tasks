@@ -1,0 +1,24 @@
+INSERT INTO users VALUES
+('Kolya', '111', 'Kyiv'),
+('Petya', '222', 'Odesa'),
+('Sasha', '333', 'Lviv'),
+('Muzik', '444', 'Chernigiv');
+
+INSERT INTO orders VALUES
+(3434, 0, 'Kolya', 1000),
+(5454, 1, 'Petya', 20000),
+(5741, 2, 'Sasha', 2500),
+(5689, 3, 'Muzik', 4520);
+
+SELECT u.phone, u.delivery_address FROM users AS u
+INNER JOIN orders AS o ON u.id = o.user_id
+WHERE u.name = 'Muzik';
+
+SELECT users.phone, users.delivery_address FROM users, orders
+WHERE users.id = orders.user_id AND users.name = 'Muzik';
+
+SELECT *
+FROM users AS u INNER JOIN orders AS o ON
+u.ID = o.user_id WHERE sum > 2000;
+
+SELECT COUNT(id) AS Всього_замовлень, SUM(sum) AS Загальна_сума FROM Orders;
