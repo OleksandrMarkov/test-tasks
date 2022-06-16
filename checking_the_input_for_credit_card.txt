@@ -1,0 +1,9 @@
+format:
+XXXX XXXX XXXX XXXX
+
+positive: 
+
+using Test Credit Card Account Numbers
+
+negative:
+no-numeric symbols
