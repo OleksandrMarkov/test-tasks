@@ -1,0 +1,67 @@
+Є вебсторінка з полями: e-mail, password та кнопкою submit. Необхідно навести приклади негативних тест-кейсів, якими можна перевірити цю сторінку.
+
+*********************************
+Solution:
+E - empty, C - correct, W - wrong
+
+Wrong e-mail: check using 'SendPulse Verifier' etc.
+
+1. e-mail: C; password: W.
+2. e-mail: W; password: C.
+3. e-mail: W; password: W.
+4. e-mail: C; password: E.
+5. e-mail: E; password: C.
+6. e-mail: E; password: E.
+7. e-mail: E; password: W.
+8. e-mail: W; password: E.
+
+*********************************
+Theory:
+e-mail: local-part@domain
+the local-part may be up to 64 octets long and the domain may have a maximum of 255 octets.
+
+local part:
+uppercase and lowercase Latin letters A to Z and a to z
+digits 0 to 9
+printable characters !#$%&'*+-/=?^_`{|}~
+dot ., provided that it is not the first or last character and provided also that it does not appear consecutively (e.g., John..Doe@example.com is not allowed).[5]
+If quoted, it may contain Space, Horizontal Tab (HT), any ASCII graphic except Backslash and Quote and a quoted-pair consisting of a Backslash followed by HT, Space or any ASCII graphic; it may also be split between lines anywhere that HT or Space appears. In contrast to unquoted local-parts, the addresses ".John.Doe"@example.com, "John.Doe."@example.com and "John..Doe"@example.com are allowed.
+
+domain:
+uppercase and lowercase Latin letters A to Z and a to z;
+digits 0 to 9, provided that top-level domain names are not all-numeric;
+hyphen -, provided that it is not the first or last character.
+*********************************
+Valid email addresses:
+simple@example.com
+very.common@example.com
+disposable.style.email.with+symbol@example.com
+other.email-with-hyphen@example.com
+fully-qualified-domain@example.com
+user.name+tag+sorting@example.com (may go to user.name@example.com inbox depending on mail server)
+x@example.com (one-letter local-part)
+example-indeed@strange-example.com
+test/test@test.com (slashes are a printable character, and allowed)
+admin@mailserver1 (local domain name with no TLD, although ICANN highly discourages dotless email addresses[10])
+example@s.example (see the List of Internet top-level domains)
+" "@example.org (space between the quotes)
+"john..doe"@example.org (quoted double dot)
+mailhost!username@example.org (bangified host route used for uucp mailers)
+"very.(),:;<>[]\".VERY.\"very@\\ \"very\".unusual"@strange.example.com (include non-letters character AND multiple at sign, the first one being double quoted)
+user%example.com@example.org (% escaped mail route to user@example.com via example.org)
+user-@example.org (local part ending with non-alphanumeric character from the list of allowed printable characters)
+postmaster@[123.123.123.123] (IP addresses are allowed instead of domains when in square brackets, but strongly discouraged)
+postmaster@[IPv6:2001:0db8:85a3:0000:0000:8a2e:0370:7334] (IPv6 uses a different syntax)
+*********************************
+Invalid email addresses:
+Abc.example.com (no @ character)
+A@b@c@example.com (only one @ is allowed outside quotation marks)
+a"b(c)d,e:f;g<h>i[j\k]l@example.com (none of the special characters in this local-part are allowed outside quotation marks)
+just"not"right@example.com (quoted strings must be dot separated or the only element making up the local-part)
+this is"not\allowed@example.com (spaces, quotes, and backslashes may only exist when within quoted strings and preceded by a backslash)
+this\ still\"not\\allowed@example.com (even if escaped (preceded by a backslash), spaces, quotes, and backslashes must still be contained by quotes)
+1234567890123456789012345678901234567890123456789012345678901234+x@example.com (local-part is longer than 64 characters)
+i_like_underscore@but_its_not_allowed_in_this_part.example.com (Underscore is not allowed in domain part)
+QA[icon]CHOCOLATE[icon]@test.com (icon characters)
+*********************************
+ 
