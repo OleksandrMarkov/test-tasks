@@ -1,0 +1,5 @@
+SELECT store
+FROM TABLE2
+JOIN TABLE1 ON
+TABLE2.id = TABLE1.StoreId
+WHERE year > 1990 AND city = 'Москва'; 
