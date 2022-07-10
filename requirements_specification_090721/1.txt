@@ -1,0 +1,13 @@
+1. video recording
+1.1 start/stop/resume/finish/cancel the recording
+1.2 save/rename/remove/ move the record  
+1.3 the quality/size/ ... of the record 
+
+2. uploading the video to web-service
+2.1 successful uploading
+2.2 time of the uploading
+2.3 the posibility to cancel of the uploading
+2.4 the file is intact, its size is not changed
+
+3. editing the name of the uploaded video on the page of the web-service
+
