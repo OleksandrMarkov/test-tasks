@@ -1,0 +1,4 @@
+1) Time is over;
+2) Money ran out;
+3) All test cases are passed;
+4) Manager's/Boss's decision;
