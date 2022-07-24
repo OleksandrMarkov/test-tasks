@@ -1,0 +1,4 @@
+textbox:empty,not empty,
+filename:valid,invalid,
+saving:save,save as,
+encoding:urf8,utf16,ansi,

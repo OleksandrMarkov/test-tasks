@@ -1,0 +1,7 @@
+textbox	filename	saving	encoding
+empty	valid	save	ansi
+not empty	invalid	save	urf8
+empty	invalid	save as	utf16
+not empty	invalid	save as	ansi
+not empty	valid	save	utf16
+empty	valid	save as	urf8
