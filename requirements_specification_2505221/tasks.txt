@@ -56,4 +56,11 @@ expected result: The recording button is clickable on the recording screen.
 6. SELECT name
    FROM TABLE1 JOIN TABLE2
    ON TABLE1.StoreId = TABLE2.id
-   WHERE city = "Москва" AND Year > 1990; 	  		 
+   WHERE city = "Москва" AND Year > 1990;
+
+7. 
+
+testing the doRegister function with SoapUI (usdl: http://users.bugred.ru/tasks/soap/WrapperSoapServer.php?wsdl)
+1) Positive test: check the registration when valid data is entered(Email: email@example.com; Name: Alex; Password: 123 )
+2) Negative test: check the registration when invalid data is entered(Email: email@; Name: Password: 123 )
+ 	  		 
